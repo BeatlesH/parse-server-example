@@ -7,6 +7,19 @@ var path = require('path');
 
 var databaseUri = process.env.DATABASE_URI || process.env.MONGODB_URI;
 
+var server = new ParseServer({
+    push: {
+      ios: {
+        pfx: 'distribution.p12',
+        bundleId: '',
+        production: true
+      }
+    },
+    databaseURI: 'mongodb://heroku_2wbg6t04:sspbl4o36vk7i4v681ala67cd0@ds035796.mlab.com:35796/heroku_2wbg6t04',
+    appId: 'iobestid84h4hsvfhjwfvu9fajksb',
+    masterKey: 'iobestkey3jefdshjskadgf0dsfhsadj',
+  });
+
 if (!databaseUri) {
   console.log('DATABASE_URI not specified, falling back to localhost.');
 }
