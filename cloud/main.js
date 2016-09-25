@@ -1,4 +1,9 @@
-
-Parse.Cloud.define('hello', function(req, res) {
-  res.success('Hi');
-});
+Parse.Push.send({
+	where: { 
+		"deviceType": { "$in": [ "ios",  "android"  ]  }  	  
+	},
+	data: { 
+		"title": "Test",
+		"alert": "Test"
+	}
+}, { useMasterKey: true });
