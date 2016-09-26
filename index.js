@@ -27,6 +27,7 @@ var server = new ParseServer({
     databaseURI: 'mongodb://heroku_2wbg6t04:sspbl4o36vk7i4v681ala67cd0@ds035796.mlab.com:35796/heroku_2wbg6t04',
     appId: 'iobestid84h4hsvfhjwfvu9fajksb',
     masterKey: 'iobestkey3jefdshjskadgf0dsfhsadj',
+    cloud: '/cloud/main.js'
   });
 
 if (!databaseUri) {
