@@ -7,14 +7,23 @@ var path = require('path');
 
 var databaseUri = process.env.DATABASE_URI || process.env.MONGODB_URI;
 
+
+
 var server = new ParseServer({
     push: {
-      ios: {
-        pfx: 'distribution.p12',
-        bundleId: '',
-        production: true
+    ios: [
+      {
+        pfx: 'development.p12', // Dev PFX or P12
+        bundleId: 'Harrison-Resnick.iOBest',
+        production: false // Dev
+      },
+      {
+        pfx: 'distribution.p12', // Prod PFX or P12
+        bundleId: 'Harrison-Resnick.iOBest',  
+        production: true // Prod
       }
-    },
+    ]
+  },
     databaseURI: 'mongodb://heroku_2wbg6t04:sspbl4o36vk7i4v681ala67cd0@ds035796.mlab.com:35796/heroku_2wbg6t04',
     appId: 'iobestid84h4hsvfhjwfvu9fajksb',
     masterKey: 'iobestkey3jefdshjskadgf0dsfhsadj',
