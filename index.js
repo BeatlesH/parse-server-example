@@ -59,7 +59,7 @@ app.use(mountPath, api);
 
 // Parse Server plays nicely with the rest of your web routes
 app.get('/', function(req, res) {
-  res.status(200).send('Make sure to star the parse-server repo on GitHub!');
+  res.status(200).send('iOBest Backend on Heroku');
 });
 
 // There will be a test page available on the /test path of your server url
